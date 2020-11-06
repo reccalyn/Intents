@@ -1,5 +1,6 @@
 package com.example.intents
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -19,9 +20,17 @@ class MainActivity : AppCompatActivity() {
             val password = pass.text.toString();
 
             if (username.equals("admin") && password.equals("1234")) {
-
+                login()
             } else {
                 Toast.makeText(this, "Incorrect username or password.", Toast.LENGTH_SHORT).show()
             }
+
+        }
+    }
+        private fun login() {
+            val intent = Intent(this, nextActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "You are now logged in", Toast.LENGTH_SHORT).show()
+        }
     }
 }
