@@ -51,12 +51,11 @@ class nextActivity : AppCompatActivity() {
 
     private fun showAlarm(){
         val intent = Intent(AlarmClock.ACTION_SET_ALARM)
-        intent.addCategory(Intent.ACTION_ALL_APPS)
-        startActivity(intent)
+        intent.addCategory(Intent.ACTION_ALL_APPS) //The intent fail due to . . . .
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         } else {
-            Toast.makeText(this, "Cannot open clock.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Cannot open SETTINGS.", Toast.LENGTH_SHORT).show()
         }
     }
 }
