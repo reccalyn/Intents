@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,5 +18,10 @@ class MainActivity : AppCompatActivity() {
             val pass = findViewById<EditText>(R.id.passwordTxt)
             val password = pass.text.toString();
 
+            if (username.equals("admin") && password.equals("1234")) {
+
+            } else {
+                Toast.makeText(this, "Incorrect username or password.", Toast.LENGTH_SHORT).show()
+            }
     }
 }
