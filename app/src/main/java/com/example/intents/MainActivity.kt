@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-        private fun login() {
-            val intent = Intent(this, nextActivity::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "You are now logged in", Toast.LENGTH_SHORT).show()
-        }
+
+    private fun login() {
+        val intent = Intent(this, nextActivity::class.java)
+        startActivity(intent)
+        Toast.makeText(this, "You are now logged in", Toast.LENGTH_SHORT).show()
     }
 }
